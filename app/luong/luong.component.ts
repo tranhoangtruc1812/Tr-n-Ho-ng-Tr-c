@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class LuongComponent implements OnInit {
 work ={
   name: null,
-  gender: 'Nữ',
+  gender: null,
   luong: null,
   rate:null
 } 
@@ -32,7 +32,9 @@ work ={
     }
   ]
   tienthuong(){
-    let luong =  this.work.rate * this.work.luong 
+    let luong
+    if(this.work.luong >= 2000000){
+     luong =  this.work.rate * this.work.luong }
     if(this.work.gender === 'Nữ')
     luong += 200000;
     return luong
