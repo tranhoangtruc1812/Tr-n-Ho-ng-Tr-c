@@ -1,0 +1,13 @@
+<div class="row" >
+    <div class="col-4" *ngFor='let sp of array'>
+        
+            <div class="card" >
+                    <img src="../assets/products/{{sp.img}}" alt="..." class="card-img-top" height="100px">
+                    <div class="card-body">
+                      <h5 class="card-title">{{sp.name}}</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a [routerLink]="['loai',sp.code,sp.Id]" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+    </div>
+</div>
